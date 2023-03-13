@@ -52,10 +52,10 @@ class App(ctk.CTk):
             "Content-Type": "application/json"
         }
         
-        response = requests.post("http://127.0.0.1:8080/api/post/", json=data, headers=headers)
+        response = requests.post("http://127.0.0.1:8000/api/post/", json=data, headers=headers)
         if response.status_code == 201:
             
-            url = "http://127.0.0.1:8080/api/blog/"
+            url = "http://127.0.0.1:8000/api/blog/"
             # Reset all inputs
             self.file_path = None
             #Success message + url to the blog api
